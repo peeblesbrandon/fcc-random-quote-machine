@@ -1,0 +1,28 @@
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 100vh; 
+}
+
+#quote-box {
+    background-color: grey;
+}
+
+#text {
+    width: 80%;
+}
+
+#author {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em
+}
+
+button {
+    display: flex;
+    justify-content: flex-end;
+    height: 3em;
+    margin: 10px;
+}
