@@ -30,7 +30,7 @@ class QuoteBox extends React.Component {
         const tweetURL = `https://twitter.com/intent/tweet?text="${this.state.quote}" - ${this.state.author}`;
         return (
             <div id="container" className="container-xs d-flex justify-content-center align-items-center vh-100 mt-md-3 overflow-auto">
-                <div id="quote-box" className="col-10 p-4 d-flex flex-column text-info">
+                <div id="quote-box" className="col-md-6 p-4 d-flex flex-column text-info">
                     <h2 id="text" className="d-block text-left"><i className="fa fa-quote-left" />{this.state.quote}</h2>
                     <p id="author" className="align-self-end font-italic">- {this.state.author}</p>
                     <div className="d-flex justify-content-center btn-group">
