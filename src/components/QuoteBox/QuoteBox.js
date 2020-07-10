@@ -1,7 +1,6 @@
 import React from 'react';
 import './QuoteBox.css';
 import QuotesList from '../QuoteBox/QuotesList.json';
-import { Container, Button } from 'react-bootstrap';
 
 class QuoteBox extends React.Component {
     constructor(props) {
@@ -29,16 +28,16 @@ class QuoteBox extends React.Component {
     // render the final quote box
     render () {
         return (
-            <Container fluid={true} id="container">
-                <div id="quote-box" className="card col-6">
-                    <h1 id="text">"{this.state.quote}"</h1>
-                    <p id="author">- {this.state.author}</p>
-                    <div className="row">
-                        <a className="col-2" variant="light" id="tweet-quote" href="www.twitter.com/intent/tweet">twitter-icon</a>
-                        <Button onClick={this.handleClick} className="col-3" variant="light" id="new-quote">New quote</Button>
+            <div id="container" className="container-xs d-flex justify-content-center align-items-center vh-100 bg-info">
+                <div id="quote-box" className="col-10 p-4 d-flex flex-column text-info">
+                    <h1 id="text" className="d-block text-left">"{this.state.quote}"</h1>
+                    <p id="author" className="align-self-end font-italic">- {this.state.author}</p>
+                    <div className="d-flex justify-content-between">
+                        <a className="btn btn-info" id="tweet-quote" href="www.twitter.com/intent/tweet"><i className="fa fa-twitter fa-2x" /></a>
+                        <button onClick={this.handleClick} className="btn btn-info font-weight-bold" variant="light" id="new-quote">New quote</button>
                     </div>
-                </div>                  
-            </Container>
+                </div>
+            </div>  
         );
     }
 }
